@@ -27,29 +27,31 @@ function PopUpWindow(props) {
     return (
         <div className="modal">
             <div className="align_center">
-                <div className="modal_content">
+                <div className="modal_content" style={{fontFamily:'Noto Sans CJK KR'}}>
 
                     <span className="close" onClick={props.toggle}>
                         &times;
                     </span>
-
-                    <div className="popUp_text" >
-                        해당 설문조사 결과를 보기 위해선
-                        <span style={{ color: '#418AFF' }}>
-                                &nbsp;{Point}P&nbsp;
-                        </span>
-                        가 필요합니다. <p /> 포인트를 사용하시겠습니까? <p/>
-                        <span style={{color:'#898989', fontSize:'0.18rem'}}>
-                            ( 잔여 포인트 : {BalancePoint}P )
-                        </span>
+                    <div style={{marginTop:'112px', marginLeft: '91px', marginRight: '91px'}}>
+                        <div className="popUp_text" >
+                            해당 설문조사 결과를 보기 위해선
+                            <span style={{ color: '#418AFF' }}>
+                                    &nbsp;{Point}P
+                            </span>
+                            가 필요합니다.포인트를 사용하시겠습니까?
+                        </div>
+                         
+                        <div style={{color:'#898989', fontWeight:'400',fontSize:'14px', textAlign:'center', marginTop:'18px'}}>( 현재 포인트 : {BalancePoint}P )</div>
+                        <div style={{color:'#898989', fontWeight:'400',fontSize:'14px', textAlign:'center', marginTop:'10px'}}>( 잔여 포인트 : {BalancePoint}P )</div>
                     </div>
-
                     <div className="align_center">
                         <button className="ok_btn" onClick={okClick}>
-                            <span style={{fontFamily:'Noto Sans CJK KR', fontWeight:'bold',color:'white'}}>확인</span>
+                            <span style={{fontWeight:'400',fontSize:'18px',color:'white'}}>확인</span>
                         </button>
                     </div>
-
+                    <div style={{textAlign:'center', fontWeight:'14px', color:'#418AFF', marginTop:'20px'}}>
+                        <a>포인트가 모자르다면? 설문조사 참여하고 포인트 받기</a>
+                    </div>
                 </div>
             </div>
         </div>
