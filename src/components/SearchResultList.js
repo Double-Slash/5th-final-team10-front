@@ -28,9 +28,6 @@ function SearchResultList() {
     </Menu>
   );
 
- 
-  
-
   const columns = [
     {
       title: '제목',
@@ -55,7 +52,7 @@ function SearchResultList() {
     },
   ];
   
-  const data = [
+  const data = [ // 임시 데이터
     {
       key: '1',
       title: 'John Brown',
@@ -101,14 +98,14 @@ function SearchResultList() {
   };
  
   return (
-    <div style={{width:'1920px'}}>
-      <div style={{ float:'left', marginLeft:'320px',marginBottom:'20px',fontFamily: 'Noto Sans CJK KR', fontWeight: '700' }}>
-        <span style={{ fontFamily: 'Noto Sans CJK KR', fontWeight: '700', color: '#418AFF' }}>
+    <div style={{width:'1920px', fontFamily:'Noto Sans CJK KR'}}>
+      <div style={{ float:'left', marginLeft:'320px',marginBottom:'20px',fontWeight: '700', fontSize:'18px' }}>
+        <span style={{fontWeight: '700', color: '#418AFF'}}>
           ' {SearchKeyword} '
             </span>
             &nbsp;에 대한 검색 결과 입니다.
 
-            <div style={{ fontFamily: 'Noto Sans CJK KR', fontSize: '0.75rem', fontWeight: 'normal', color: '#898989' }}>
+            <div style={{ fontSize: '14px', fontWeight: '500', color: '#898989' }}>
           ( {NumOfSearch}개 결과 검색 )
             </div>
       </div>
