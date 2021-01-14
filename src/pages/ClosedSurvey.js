@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchResultList from '../components/SearchResultList'
-import SurveyTable from '../components/SurveyTable'
+import SurveyTable from '../common/SurveyTable'
 
 function ClosedSurvey() {
     const data=[
