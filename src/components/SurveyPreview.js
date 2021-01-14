@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import QuestionForm from './QuestionForm'
-
+import QuestionForm from '../common/QuestionForm'
+import SurveyIntro from '../common/SurveyIntro'
 function SurveyPreview(props) {
    
     const [questionDatas, setquestionDatas] = useState([])
@@ -44,67 +44,19 @@ function SurveyPreview(props) {
 
     return (
         <div>
-            <div style={{ width: '960px', margin: '0 auto' }}>
-
+            <div style={{ width: '1280px', marginLeft: '320px', marginRight:'320px' }}>
                 {/*  미리보기 배너  */}
-                <div className='align_center' style={{ fontFamily: 'Noto Sans CJK KR', backgroundColor: '#D7E6FF', width: '100%', height: '28px' }}>
-                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#418AFF' }}>[미리보기]</span>
+                <div className='align_center' style={{ fontFamily: 'Noto Sans CJK KR', backgroundColor: '#D7E6FF', width: '100%', height: '38px' }}>
+                    <span style={{ fontWeight: '700', fontSize: '18px', color: '#418AFF' }}>[미리보기]</span>
                 </div>
                 {/*  미리보기 배너  */}
 
+                <SurveyIntro preview={1}/>
 
-                <div style={{ position: 'relative', height: '300px' }}>
-                    <div style={{ position: 'absolute', zIndex: '0', left: '50%', transform: 'translateX(-50%)', width: '100%', marginTop: '66px' }}>
-
-                {/*  대표 사진  */}
-                        <div style={{ width: '340px', marginLeft: '30px' }}>
-                            <img src='http://via.placeholder.com/340x234' style={{ position: 'absolute', zIndex: '0', borderRadius: '10px', float: 'left' }} />
-                            <div className='pointBox'>
-                                <div style={{ fontSize: '13px', fontWeight: '700', color: '#418AFF', marginTop: '5px' }}>10P</div>
-                            </div>
-                        </div>
-                {/*  대표 사진  */}
-
-
-                {/*  설문조사 소개 문구  */}
-                        <div style={{ position: 'relative', float: 'right', marginRight: '30px', width: '560px', height: '234px' }}>
-                            <div style={{ marginLeft: '29.6px' }}>
-                                <div style={{ fontWeight: '700', fontSize: '26px' }}>
-                                    <span style={{ color: '#418AFF' }}>
-                                        [음식]
-                                    </span>
-                                    &nbsp;맥딜리버리 어플 사용성에 관한 평가
-                                </div>
-                                <div style={{ fontWeight: '400', marginTop: '10px', fontSize: '15px' }}>
-                                    2020.12.09 ~ 2021.01.09 (진행중)
-                                </div>
-                                <div style={{ fontWeight: '400', marginTop: '39px', fontSize: '15px' }}>
-                                    안녕하세요. 저희는 XX대학교 XXX학과 재학생입니다.안녕하세요. 저희는 XX대학교 XXX학과 재학생입니다.
-                                    본 설문은 XX과목을 수강하며 맥딜리버리 어플을 효율적으로 보낼 수 있도록 하기위한 프로젝트를 진행중입니다. 많은 참여 부탁드립니다.
-                                </div>
-                                 
-                                <div style={{ fontWeight: '400', fontSize: '10px', color: '#6C6C6C', position: 'absolute', bottom: '0', right: '0' }}>
-                                    seungh00 님의 설문조사
-                                </div>
-
-                            </div>
-                        </div>
-                {/*  설문조사 소개 문구 */}
-
-
-                    </div>
-                
-                {/*  커버  */}
-                    <div style={{ position: 'absolute', zIndex: '2', left: '50%', transform: 'translateX(-50%)', height: '347px', width: '100%', backgroundColor: 'rgb(239,239,239,0.5)' }} />
-
-                {/*  커버  */}
-
-                </div>
-
-                <hr style={{backgroundColor:'#C4C4C4', marginTop:'47px',height:'1px', border:'0'}}/>
+                <hr style={{backgroundColor:'#C4C4C4', marginTop:'64px',height:'1px', border:'0'}}/>
         
                 {/*  질문 항목들  */}
-               <div style={{marginTop:'47px', marginBottom:'57px'}}>
+               <div style={{marginTop:'64px', marginBottom:'57px'}}>
                     {mapToComponent(questionData)}
                </div>
                 {/*  질문 항목들  */}

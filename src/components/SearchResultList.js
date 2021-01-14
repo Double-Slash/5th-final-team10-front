@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SurveyTable from './SurveyTable'
+import SurveyTable from '../common/SurveyTable'
 
 
 function SearchResultList() {

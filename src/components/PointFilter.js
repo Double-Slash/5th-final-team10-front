@@ -11,7 +11,7 @@ function PointFilter() {
            let value = inputSlider.value;
            setpoint(value);
            slideValue.textContent = value;
-           slideValue.style.left = (value/1.6)+"%";
+           slideValue.style.left = (value/1.535)+"%";
            slideValue.classList.add("show");
            /*fetch() // 포인트에 따른 설문조사 정보 받기
            .then(response => response.json())
@@ -19,7 +19,7 @@ function PointFilter() {
                
            })*/
 
-           inputSlider.style.background = 'linear-gradient(to right, #418AFF 0%, #418AFF '+ value/1.6 +'%, #C4C4C4 ' + value/1.55555555 + '%, #C4C4C4 150%)'
+           inputSlider.style.background = 'linear-gradient(to right, #418AFF 0%, #418AFF '+ value/1.6 +'%, #C4C4C4 ' + value/1.5 + '%, #C4C4C4 150%)'
        });
        inputSlider.onblur=(()=>{
         slideValue.classList.remove("show");
