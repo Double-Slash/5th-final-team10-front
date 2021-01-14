@@ -18,13 +18,7 @@ function QuestionForm(props) {
       };
 
     const { TextArea } = Input;
-   
-    /* //Checkbox.Group options 의 또 다른 속성
-        const options = [
-        { label: 'Apple', value: 'Apple' },
-        { label: 'Pear', value: 'Pear' },
-        { label: 'Orange', value: 'Orange' },
-    ];*/
+ 
 
    function onCheckChange(checkedValues){ // 체크 박스 선택 감지
         console.log('checked = ', checkedValues);

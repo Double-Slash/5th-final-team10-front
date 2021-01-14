@@ -5,19 +5,11 @@ import { Menu, Dropdown, message } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
 
-/*ReactDOM.render(
-  <Dropdown overlay={menu} trigger={['click']}>
-    <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-      Click me <DownOutlined />
-    </a>
-  </Dropdown>,
-  mountNode,
-);*/
-
 function SearchResultList() {
 
   const [SearchKeyword, setSearchKeyword] = useState('수면시간')
   const [NumOfSearch, setNumOfSearch] = useState(0)
+  const [SearchResults, setSearchResults] = useState([])
 
   const menu = (
     <Menu onClick={onClick}>
@@ -96,6 +88,15 @@ function SearchResultList() {
     }
    document.getElementById('text').innerText=`${text}`
   };
+
+  /*
+  useEffect(() => {
+    fetch()
+            .then(response => {
+                setSearchResults(response.json()) //서버에서 검색 결과 가져오기
+            })
+  })*/
+
  
   return (
     <div style={{width:'1920px', fontFamily:'Noto Sans CJK KR'}}>

@@ -41,7 +41,7 @@ function PopUpWindow(props) {
                             가 필요합니다.포인트를 사용하시겠습니까?
                         </div>
                          
-                        <div style={{color:'#898989', fontWeight:'400',fontSize:'14px', textAlign:'center', marginTop:'18px'}}>( 현재 포인트 : {BalancePoint}P )</div>
+                        <div style={{color:'#898989', fontWeight:'400',fontSize:'14px', textAlign:'center', marginTop:'18px'}}>( 현재 포인트 : {Point}P )</div>
                         <div style={{color:'#898989', fontWeight:'400',fontSize:'14px', textAlign:'center', marginTop:'10px'}}>( 잔여 포인트 : {BalancePoint}P )</div>
                     </div>
                     <div className="align_center">

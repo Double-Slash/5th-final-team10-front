@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { Row, Col } from 'antd';
 import pic1 from '../images/pic1.jpg'
 import pic2 from '../images/pic2.jpg'
@@ -12,7 +12,9 @@ import pointBox from '../images/point-box.png'
 
 function GridSurveyPreview() {
 
-    const items=([ 
+    const [items, setitems] = useState([])
+
+    const _items=([ 
         // 테스트 위한 임시 데이터
         {
             img:pic1,
@@ -87,6 +89,13 @@ function GridSurveyPreview() {
             
         }
     ])
+
+    /*useEffect(() => {
+        fetch()
+        .then(response => {
+            setitems(response.json()) //서버에서 검색 결과 가져오기
+        })
+    })*/
 
     return (
         <div style={{display:'flex',width:'1280px', marginLeft:'320px', marginRight:'320px', fontFamily:'Noto Sans CJK KR'}}>

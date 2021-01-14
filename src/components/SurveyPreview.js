@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import QuestionForm from './QuestionForm'
 
-function SurveyPreview() {
+function SurveyPreview(props) {
    
+    const [questionDatas, setquestionDatas] = useState([])
+
     const questionData = ([
         // 이전 페이지에서 props로 받기
         { //임의로 넣은 데이터입니당
@@ -34,7 +36,11 @@ function SurveyPreview() {
     const mapToComponent = data => {
         return data.map((question, index) => (<QuestionForm question={question} key={index}/>) //QuestionForm 태그 배열 만들어짐
         ); }
-        
+   
+        /* // 이전 화면에서 데이터 props로 가져오기
+    useEffect(() => {
+        setquestionDatas(props.datas);
+    })*/
 
     return (
         <div>
