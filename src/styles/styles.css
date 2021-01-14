@@ -94,7 +94,7 @@
 .range{
     text-align: center;
     height: 80px;
-    width: 400px;
+    width: 1280px;
 }
 
 .range .sliderValue{
@@ -114,7 +114,7 @@
     transition: transform 0.2s ease-in-out;
     line-height: 27px;
     z-index: 2;
-    background-image: url('../images/slider-value.png');
+    background-image: url('../images/slider-label.png');
     background-size: 41px 32px;
 }
 
@@ -169,12 +169,12 @@
     outline: none;
 }
 .pointBox{
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 24px;
     position: absolute;
     z-index: 1;
-    width: 50px ;
-    height: 50px;
+    width: 71px ;
+    height: 42px;
     background-image: url('../images/point-box.png');
     text-align: center;
     background-size: contain;

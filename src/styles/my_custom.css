@@ -2193,7 +2193,7 @@ html {
   touch-action: manipulation;
   height: 32px;
   padding: 4px 15px;
-  font-size: 14px;
+  font-size: 18px;
   border-radius: 6px;
   color: rgba(0, 0, 0, 0.85);
   background: #fff;
@@ -5238,8 +5238,8 @@ a.ant-btn-sm {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  color: rgba(0, 0, 0);
+  font-size: 18px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -5658,7 +5658,7 @@ a.ant-btn-sm {
   min-width: 0;
   padding: 4px 11px;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5715;
   background-color: #fff;
   background-image: none;
@@ -7078,7 +7078,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  font-size: 18px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -7213,9 +7213,9 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   clear: both;
   margin: 0;
   padding: 5px 12px;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0);
   font-weight: normal;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 22px;
   white-space: nowrap;
   cursor: pointer;
@@ -13929,7 +13929,7 @@ textarea.ant-input-affix-wrapper {
   min-width: 0;
   padding: 4px 11px;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5715;
   background-color: #fff;
   background-image: none;
@@ -17917,7 +17917,7 @@ textarea.ant-pagination-options-quick-jumper input {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  font-size: 18px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -17936,8 +17936,9 @@ textarea.ant-pagination-options-quick-jumper input {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  color: rgba(0, 0, 0);
+  font-weight: 400;
+  font-size: 18px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -17953,7 +17954,7 @@ textarea.ant-pagination-options-quick-jumper input {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
+  font-size: 18px;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
