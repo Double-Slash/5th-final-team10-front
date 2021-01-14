@@ -20883,7 +20883,7 @@ span.ant-radio + * {
   border-radius: 0;
 }
 .ant-table-tbody > tr.ant-table-row:hover > td {
-  background: #fafafa;
+  background: #EFEFEF;
 }
 .ant-table-tbody > tr.ant-table-row-selected > td {
   background: #f0f8ff;
