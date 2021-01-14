@@ -20800,7 +20800,7 @@ span.ant-radio + * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0);
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
