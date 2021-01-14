@@ -42,8 +42,8 @@
 .modal_content{
     background-color: white;
     margin-top: 154px;
-    height: 264px;
-    width: 508px;
+    height: 500px;
+    width: 840px;
     padding: 10px;
     border-radius: 7px;
 }
@@ -56,7 +56,8 @@
 
 .close{
     color: black;
-    float: left;
+    float: right;
+    font-weight: 700;
 }
 
 .close:hover{
@@ -65,17 +66,15 @@
 }
 
 .popUp_text{
-    margin-top: 70px;
-    font-family: 'Noto Sans CJK KR';
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 30px;
    text-align: center;
-   line-height: 8px;
 }
 
 .ok_btn{
     background-color: #418AFF;
-    height: 36px;
-    width: 200px;
+    height: 72px;
+    width: 401px;
     padding: 10px;
     border: 0px;
     border-radius: 7px;
