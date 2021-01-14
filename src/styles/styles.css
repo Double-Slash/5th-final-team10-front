@@ -84,6 +84,8 @@
 
 .table_title{
     color:black;
+    font-weight: 400;
+    font-size: 14px;
 }
 .table_title:hover{
     color:  #418AFF;

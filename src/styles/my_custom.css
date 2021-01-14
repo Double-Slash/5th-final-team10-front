@@ -20851,9 +20851,9 @@ span.ant-radio + * {
 }
 .ant-table-thead > tr > th {
   color: rgba(0, 0, 0, 0.85);
-  font-size: 0.8rem;
+  font-size: 16px;
   font-weight: 500;
-  text-align: left;
+  text-align: left; 
   font-family: 'Noto Sans CJK KR';
   background: #fff;
   border-top: 1px solid #f0f0f0;
@@ -20869,6 +20869,8 @@ span.ant-radio + * {
 .ant-table-tbody > tr > td {
   border-bottom: 1px solid #f0f0f0;
   transition: background 0.3s;
+  font-weight: 400;
+  font-size: 14px;
 }
 .ant-table-tbody > tr > td > .ant-table-wrapper:only-child .ant-table {
   margin: -16px -16px -16px 33px;
