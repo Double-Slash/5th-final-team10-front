@@ -16970,8 +16970,8 @@ textarea.ant-mentions {
   border: none;
 }
 .ant-page-header-footer .ant-tabs .ant-tabs-tab {
-  padding: 8px 0;
-  font-size: 16px;
+  padding: 0 0;
+  font-size: 18px;
 }
 .ant-page-header-compact .ant-page-header-heading {
   flex-wrap: wrap;
@@ -21395,12 +21395,12 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   transform: rotate(0deg);
 }
 .ant-tabs-small > .ant-tabs-nav .ant-tabs-tab {
-  padding: 8px 0;
-  font-size: 14px;
+  padding: 0 0;
+  font-size: 18px;
 }
 .ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
-  padding: 16px 0;
-  font-size: 16px;
+  padding: 0 0;
+  font-size: 18px;
 }
 .ant-tabs-card.ant-tabs-small > .ant-tabs-nav .ant-tabs-tab {
   padding: 6px 16px;
@@ -21897,7 +21897,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 }
 .ant-tabs-ink-bar {
   position: absolute;
-  background: #418AFF;
+  background: #2D59B8;
   pointer-events: none;
 }
 .ant-tabs-tab {
@@ -21945,6 +21945,8 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
   color: #69a7ff;
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  height: 67px;
+  background-color: #D7E6FF;
   color: #418AFF;
   font-weight: 500;
 }
