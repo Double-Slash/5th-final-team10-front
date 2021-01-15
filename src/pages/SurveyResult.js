@@ -63,6 +63,9 @@ function SurveyResult() {
             }
         } //QuestionForm 태그 배열 만들어짐
         ); }
+    const mapToComponent = data => {
+        return data.map((question, index) => (<QuestionForm question={question} key={index}/>) //QuestionForm 태그 배열 만들어짐
+        ); }
     const Demo = () => (
         <Tabs size='large' defaultActiveKey="1" onChange={callback}>
             <TabPane tab={<div style={{width: '600px', textAlign:'center', fontSize:'18px', fontWeight:'700', color:'#2D59B8',marginTop:'20px'}}>요약 보기</div>} key="1">
@@ -73,7 +76,7 @@ function SurveyResult() {
             <TabPane tab={<div style={{width: '600px', textAlign:'center', fontSize:'18px', fontWeight:'700', color:'#2D59B8',marginTop:'20px'}}>개별 보기</div>} key="2">
                 {/*  질문 항목들  */}
                 <div style={{ marginTop: '64px', marginBottom: '57px' }}>
-                    {mapToBoxComponent(questionData)}
+                    {mapToComponent(questionData)}
                 </div>
                 {/*  질문 항목들  */}
                 <button style={{ float: 'right', backgroundColor: '#418AFF', border: '0px', borderRadius: '10px', height: '59px', width: '180px', color: '#fff', fontSize: '18px', fontWeight: '400' }}>확인</button>
