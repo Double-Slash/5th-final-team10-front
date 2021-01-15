@@ -2,6 +2,9 @@ import React from 'react'
 import { Tabs } from 'antd';
 import SurveyIntro from '../common/SurveyIntro'
 import QuestionForm from '../common/QuestionForm'
+import downloadIcon from '../images/download.png'
+import { Pagination } from 'antd';
+import $ from 'jquery'
 
 function SurveyResult() {
     const { TabPane } = Tabs;
@@ -38,8 +41,10 @@ function SurveyResult() {
         }
     ])
 
+    function tabStyle(title){ return (<div style={{width: '600px', textAlign:'center', fontSize:'18px', fontWeight:'700', color:'#2D59B8',marginTop:'20px',marginBottom:'20px'}}>{title}</div>)}
+
     function callback(key) {
-        console.log(key);
+        console.log(`${key}`)
     }
 
     const mapToBoxComponent = data => {
@@ -49,7 +54,7 @@ function SurveyResult() {
                          <div style={{position:'absolute',width:'100px',fontSize:'18px',fontWeight:'400',marginLeft:'27px',marginTop:'9px'}}>질문 {question.questionNo}</div>
                          <div style={{width:'1150px', float:'right',fontWeight:'700', fontSize:'18px',marginTop:'9px'}}>{question.question}</div>
                     </div>
-                    <div style={{height:'500px', border:'solid #C4C4C4',borderWidth: '0 1px 1px 1px',borderRadius:'0 0 10 10',marginBottom:'58px'}}>{mapToQFComponent(questionData,question.question)}</div>
+                    <div style={{height:'500px', border:'solid #C4C4C4',borderWidth: '0 1px 1px 1px',borderRadius:'0 0 10 10',marginBottom:'58px'}}>{mapToQFComponent(questionData,question.questionNo)}</div>
                 </div>
             ) //QuestionForm 태그 배열 만들어짐
             ); }
@@ -57,25 +62,30 @@ function SurveyResult() {
     const mapToQFComponent = (data,questionId) => {
         return data.map((question, index) => {
             for(let i=0;i<data.length;i++){
-                if(questionId == question.questionId){
+                if(questionId == question.questionNo){
                    return <QuestionForm question={question} key={index}/>
                 }
             }
         } //QuestionForm 태그 배열 만들어짐
         ); }
+
     const mapToComponent = data => {
         return data.map((question, index) => (<QuestionForm question={question} key={index}/>) //QuestionForm 태그 배열 만들어짐
         ); }
+
     const Demo = () => (
         <Tabs size='large' defaultActiveKey="1" onChange={callback}>
-            <TabPane tab={<div style={{width: '600px', textAlign:'center', fontSize:'18px', fontWeight:'700', color:'#2D59B8',marginTop:'20px'}}>요약 보기</div>} key="1">
+            <TabPane tab={tabStyle('요약 보기')} key="1">
+            <div style={{marginTop:'56px' ,fontSize:'36px', fontWeight:'700', color:'#418AFF'}}>총 응답자 81명<a style={{float:'right',fontSize:'18px', fontWeight:'400', color:'#000',color:'#000'}}><img src={downloadIcon} style={{height:'13px',width:'14px'}}/>.csv로 다운로드</a></div>
                 <div style={{marginTop:'86px'}}>
                    {mapToBoxComponent(questionData)}
                 </div>
-             </TabPane>
-            <TabPane tab={<div style={{width: '600px', textAlign:'center', fontSize:'18px', fontWeight:'700', color:'#2D59B8',marginTop:'20px'}}>개별 보기</div>} key="2">
+                <button style={{ float: 'right', backgroundColor: '#418AFF', border: '0px', borderRadius: '10px', height: '59px', width: '180px', color: '#fff', fontSize: '18px', fontWeight: '400' ,marginTop:'28px'}}>확인</button>
+            </TabPane>
+            <TabPane tab={tabStyle('개별 보기')} key="2">
+            <div style={{marginTop:'56px' ,fontSize:'18px', fontWeight:'700', color:'#000'}}>개별 응답<div style={{float:'right',width:'1141px'}}><Pagination simple defaultCurrent={1} total={50} /></div></div>
                 {/*  질문 항목들  */}
-                <div style={{ marginTop: '64px', marginBottom: '57px' }}>
+                <div style={{ marginTop: '84px', marginBottom: '57px' }}>
                     {mapToComponent(questionData)}
                 </div>
                 {/*  질문 항목들  */}
@@ -91,8 +101,9 @@ function SurveyResult() {
                 <SurveyIntro preview={0} />
                 <hr style={{ backgroundColor: '#C4C4C4', marginTop: '64px', height: '1px', border: '0' }} />
 
-                <div style={{marginTop:'56px',marginBottom:'45px', fontSize:'36px', fontWeight:'700', color:'#418AFF'}}>총 응답자 81명</div>
-
+                <div id='here' style={{marginTop:'56px',marginBottom:'45px'}}>
+               
+                 </div>
                 <Demo />
 
             </div>
