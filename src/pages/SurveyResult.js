@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Tabs } from 'antd';
 import SurveyIntro from '../common/SurveyIntro'
 import QuestionForm from '../common/QuestionForm'
@@ -8,6 +8,7 @@ import $ from 'jquery'
 
 function SurveyResult() {
     const { TabPane } = Tabs;
+    const [tabkey, settabkey] = useState('1')
 
     const questionData = ([
         // 이전 페이지에서 props로 받기
@@ -89,69 +90,37 @@ function SurveyResult() {
         );
     }
 
-    function callback(key) {
-       if(key==='1'){
-        let item1 = document.createElement('div');
-         item1.innerHTML='총 응답자 81명';
-         item1.style.height='153px';
-         item1.style.fontSize='36px';
-         item1.style.fontWeight='700';
-         item1.style.color='#418AFF';
-         item1.style.paddingTop='40px';
+    function callback(_key) {
+        console.log(`${_key}`)
+        settabkey(_key);
         
-         let item2 = document.createElement('a');
-         item2.innerHTML='.csv로 다운로드';
-         item2.style.float='right';
-         item2.style.fontSize='18px';
-         item2.style.fontWeight='400';
-         item2.style.color='#000';
-
-         let img = document.createElement('img')
-         img.setAttribute('src',downloadIcon);
-         img.style.height = '13px';
-         img.style.width = '14px';
-
-         item2.appendChild(img);
-         item1.appendChild(item2);
-
-        $('#here').html(()=>{
-            return item1;
-        })
-       } else{
-        <div style={{ marginTop: '56px', fontSize: '18px', fontWeight: '700', color: '#000' }}>
-        개별 응답
-        <div style={{ float: 'right', width: '1141px' }}>
-            <Pagination simple defaultCurrent={1} total={50} />
-        </div>
-    </div>
-        let item1 = document.createElement('div');
-        item1.innerHTML='개별 응답';
-        item1.style.height='153px';
-        item1.style.fontSize='18px';
-        item1.style.fontWeight='700';
-        item1.style.color='#000';
-        item1.style.paddingTop='40px';
-       
-        let paginationDiv = document.createElement('div');
-        paginationDiv.style.float='right';
-        paginationDiv.style.width='1141px';
-
-        let pagination = document.createElement('Pagination')
-       // pagination.setAttribute('simple','true');
-        pagination.setAttribute('defaultCurrent',1);
-        pagination.setAttribute('total',50);
-
-        paginationDiv.appendChild(pagination);
-        item1.appendChild(paginationDiv);
-
-       $('#here').html(()=>{
-           return item1;
-       })
-       }
     }
 
+    function tagreturn(){
+        if(tabkey==='1'){
+            return ( <div style={{ height:'153px',fontSize: '36px', fontWeight: '700', color: '#418AFF',paddingTop:'40px' }}>
+                        총 응답자 81명
+                        <a style={{ float: 'right', fontSize: '18px', fontWeight: '400', color: '#000', color: '#000' }}>
+                            <img src={downloadIcon} style={{ height: '13px', width: '14px' }} />
+                                .csv로 다운로드
+                        </a>
+                    </div>)
+        } else{
+            return (
+                <div style={{height:'153px',fontSize: '18px', fontWeight: '700', color: '#000',paddingTop:'40px' }}>
+                    개별 응답
+                    <div style={{ float: 'right', width: '1141px' }}>
+                        <Pagination simple defaultCurrent={1} total={50} />
+                    </div>
+                </div>
+
+            )
+        }
+    }
+
+
     const Demo = () => ( 
-        <Tabs size='large' defaultActiveKey="1" onChange={callback}>
+        <Tabs size='large' defaultActiveKey={tabkey} onChange={callback}>
 
             <TabPane tab={tabStyle('요약 보기')} key="1">
 
@@ -163,7 +132,6 @@ function SurveyResult() {
             </TabPane>
 
             <TabPane tab={tabStyle('개별 보기')} key="2">
-               
                 
                 {/*  질문 항목들  */}
                 <div style={{ marginTop: '84px', marginBottom: '57px' }}>
@@ -185,24 +153,12 @@ function SurveyResult() {
                 <hr style={{ backgroundColor: '#C4C4C4', marginTop: '64px', height: '1px', border: '0' }} />
 
                 <div id='here' >
-                <div style={{ marginTop: '56px', fontSize: '18px', fontWeight: '700', color: '#000' }}>
-                    개별 응답
-                    <div style={{ float: 'right', width: '1141px' }}>
-                        <Pagination simple defaultCurrent={1} total={50} />
-                    </div>
-                </div>
-                <div style={{ height:'153px',fontSize: '36px', fontWeight: '700', color: '#418AFF',paddingTop:'40px' }}>
-                    총 응답자 81명
-                    <a style={{ float: 'right', fontSize: '18px', fontWeight: '400', color: '#000', color: '#000' }}>
-                        <img src={downloadIcon} style={{ height: '13px', width: '14px' }} />
-                            .csv로 다운로드
-                    </a>
-                </div>
+                {tagreturn() }
                 </div>
                 <Demo />
 
             </div>
-        </div>
+            </div>
     )
 }
 
