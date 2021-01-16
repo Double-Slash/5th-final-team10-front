@@ -11,5 +11,5 @@
 ### 
 issue -> pull requset -> review -> merge 과정 지키자! 
 
-
-
+### Design Pattern 
+가장 기본적인 Container-Presenter 패턴 지키자!

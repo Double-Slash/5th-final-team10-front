@@ -1,8 +1,15 @@
 import React,{useState} from 'react'
 import QuestionForm from '../common/QuestionForm'
 import DropdownMenu from '../common/DropdownMenu'
-import PointFilter from '../components/PointFilter'
-import SurveyIntro from '../common/SurveyIntro'
+import PointFilter from '../common/PointFilter'
+import SurveyIntro from '../components/SurveyIntro'
+
+/**
+ * 
+ * 설문조사 응답하기 페이지 
+ * by : 우혜경
+ * 
+ **/ 
 
 function ResponseSurvey() {
 

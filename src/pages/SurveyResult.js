@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
 import { Tabs } from 'antd';
-import SurveyIntro from '../common/SurveyIntro'
+import SurveyIntro from '../components/SurveyIntro'
 import QuestionForm from '../common/QuestionForm'
 import downloadIcon from '../images/download.png'
 import { Pagination } from 'antd';
-import $ from 'jquery'
+
+/**
+ * 
+ * 종료된 설문조사 결과보기 페이지
+ * by : 우혜경
+ * 
+ **/ 
 
 function SurveyResult() {
     const { TabPane } = Tabs;
