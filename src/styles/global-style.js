@@ -36,9 +36,6 @@ const GlobalStyle = createGlobalStyle`
     outline : none;
   }
 
-  input::placeholder{
-    padding:20px;
-  }
   
   ol, ul, li {
     list-style: none;
