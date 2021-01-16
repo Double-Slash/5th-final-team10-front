@@ -10,6 +10,13 @@ import pic7 from '../images/pic7.jpg'
 import pic8 from '../images/pic8.jpg'
 import pointBox from '../images/point-box.png'
 
+/**
+ * 
+ * 그리드 형태 퀵 서베이 -> 쪼개기 
+ * by : 우혜경
+ * 
+ **/ 
+
 function GridSurveyPreview() {
 
     const [items, setitems] = useState([])

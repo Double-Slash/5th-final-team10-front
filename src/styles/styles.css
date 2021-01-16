@@ -114,7 +114,7 @@
     transition: transform 0.2s ease-in-out;
     line-height: 27px;
     z-index: 2;
-    background-image: url('../images/slider-label.png');
+    background-image: url('../images/slider-value.png');
     background-size: 41px 32px;
 }
 

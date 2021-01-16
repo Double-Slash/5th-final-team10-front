@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
-import SurveyTable from '../common/SurveyTable'
+import SurveyTable from '../components/SurveyTable'
 
+/**
+ * 
+ * 검색 결과 -> 쪼개기 
+ * by : 우혜경
+ * 
+ **/ 
 
 function SearchResultList() {
 

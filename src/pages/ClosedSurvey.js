@@ -1,6 +1,13 @@
 import React from 'react'
 import SearchResultList from '../components/SearchResultList'
-import SurveyTable from '../common/SurveyTable'
+import SurveyTable from '../components/SurveyTable'
+
+/**
+ * 
+ * 종료된 설문조사 모음 페이지
+ * by : 우혜경
+ * 
+ **/ 
 
 function ClosedSurvey() {
     const data=[

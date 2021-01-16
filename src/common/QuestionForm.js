@@ -7,6 +7,13 @@ import { Input } from 'antd';
 import { DatePicker, Space } from 'antd';
 import { TimePicker } from 'antd';
 
+/**
+ * 
+ * 질문 폼 -> 쪼개기  
+ * by : 우혜경
+ * 
+ **/ 
+
 function QuestionForm(props) {
 
     const [value, setvalue] = useState(1) // 라디오 버튼 선택 값
