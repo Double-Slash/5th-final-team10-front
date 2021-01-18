@@ -26,37 +26,37 @@ const HeaderPresenter = ({main, login, point}) => {
   export default HeaderPresenter;
 
   const WrapperHeader = styled.header`
-  background-color : ${props => props.color ? '' :props.theme.main_color}; 
-  width: 100%;
-  height: auto;
-`;
+    background-color : ${props => props.color ? '' :props.theme.main_color}; 
+    width: 100%;
+    height: auto;
+  `;
 
-const Container = styled.div`
-  display: flex;
-  height : 135px;
-`;
+  const Container = styled.div`
+    display: flex;
+    height : 135px;
+  `;
 
-const Logo = styled.img`
-position: absolute;
-width: 254px;
-height: 42.06px;
-left: 320px;
-top: 37px;
-`;
+  const Logo = styled.img`
+  position: absolute;
+  width: 254px;
+  height: 42.06px;
+  left: 320px;
+  top: 37px;
+  `;
 
-const Search = styled.div`
-position: absolute;
-left: 720px;
-top: 30px;
-`;
+  const Search = styled.div`
+  position: absolute;
+  left: 720px;
+  top: 30px;
+  `;
 
-const Sign = styled.div`
-position : absolute;
-top: 46px;
-right : 320px;
+  const Sign = styled.div`
+  position : absolute;
+  top: 46px;
+  right : 320px;
 
-span{
-  margin-left : 40px;
-  color : ${props => props.theme.white}; 
-}
-`;
+  span{
+    margin-left : 40px;
+    color : ${props => props.theme.white}; 
+  }
+  `;

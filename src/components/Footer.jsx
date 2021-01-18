@@ -13,8 +13,10 @@ function Footer() {
   );
 }
 const Container = styled.div`
-  position: absolute;
   width: 100%;
+  padding-left : 321px;
+  padding-top : 25px;
+  padding-bottom : 37px;
   height : 120px;
   bottom: 0px;
   background-color: ${props => props.theme.footer_bg_color};
@@ -23,18 +25,13 @@ const Container = styled.div`
 `;
 
 const Description = styled.div`
-  margin-left : 321px;
-  margin-top : 25px;
-  
   span {
     margin-right : 50px;
   }
 `;
 
 const Copyright = styled.div`
-  margin-left : 321px;
   margin-top : 12px; 
-  margin-bottom : 37px;
 `;
 
 
