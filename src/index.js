@@ -11,11 +11,16 @@ import {Provider} from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './store/modules/reducers/index';
+import {initialState} from './store/modules/reducers/userReducer';
 import rootSaga from './store/modules/sagas/index';
 import createSagaMiddleware from 'redux-saga';
 
+const authenticationData = sessionStorage.getItem("authentication");
+
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(sagaMiddleware)),);
+const store = createStore(rootReducer,authenticationData?{...initialState,
+  authentication: { ...JSON.parse(authenticationData)}} : initialState
+  ,composeWithDevTools(applyMiddleware(sagaMiddleware)),);
 
 sagaMiddleware.run(rootSaga);
 
