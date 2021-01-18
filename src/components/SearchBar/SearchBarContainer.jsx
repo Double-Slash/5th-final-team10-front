@@ -1,17 +1,36 @@
-import React from 'react';
+import React,{useState} from 'react';
 import SearchBarPresenter from './SearchBarPresenter';
+import { useDispatch, useSelector } from "react-redux";
+import allAction from '../../store/modules/actions/index';
 
-const SearchBarContainer = () => {
-    const onChange = () => {
-        console.log('i');
+
+const SearchBarContainer = (props) => {
+  const keyword = useSelector(state => state.surveys.keyword);
+  const [ value, setValue ] = useState(keyword);
+  const dispatch = useDispatch();
+
+  const onChange = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+  }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(allAction.searchSurvey(value));
+  }
+  const onEnter = (e) =>{
+    if (e.key === 'Enter') {
+      dispatch(allAction.searchSurvey(value));
+      //Link to
     }
-    const onSubmit = () => {
-        console.log('a');
-    }
+  }
+  //console.log(keyword);
+   
     return (
       <SearchBarPresenter
-        onChange={onChange}
-        onSubmit={onSubmit}
+        main = {props.main}
+        onChange={onChange} 
+        onSubmit={onSubmit} 
+        onEnter={onEnter}
       />
     );
   };
