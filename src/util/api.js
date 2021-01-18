@@ -20,3 +20,8 @@ export default api;
 //survey
 //진행중인 설문조사 로딩
 export const getS = () => api.get('/surveys');
+
+
+//user
+export const postLogin = form => api.post('/login',form);
+export const postRegister = form => api.post('/join', form);

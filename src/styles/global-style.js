@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #ffffff;
     font-family: Noto Sans CJK KR;
+    height: 100%;
+    max-height: 100%;
 }
   
   a {

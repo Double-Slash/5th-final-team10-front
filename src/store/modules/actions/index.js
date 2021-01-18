@@ -1,4 +1,5 @@
 import {loadSurvey, loadSurveyFail, loadSurveySuccess,selectCategory,searchSurvey} from './surveyAction'
+import {signUpRequest, signInRequest, logOut,signInSuccess} from './userAction'
 
 const allAction = {
     loadSurvey,
@@ -6,6 +7,10 @@ const allAction = {
     loadSurveySuccess,
     selectCategory,
     searchSurvey,
+    signUpRequest,
+    signInSuccess,
+    signInRequest,
+    logOut,
 };
 
 export default allAction;
