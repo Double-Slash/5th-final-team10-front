@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-
+import MainPage from './pages/MainPage';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <p>SharedSurvey</p>
+      <MainPage/>
+      <Footer/>
     </div>
   );
 }
