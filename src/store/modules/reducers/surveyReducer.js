@@ -1,7 +1,7 @@
 const initialState = {
     keyword: "",
     category : "",
-    surveys: [],
+    surveys: [{'title':'d'},],
     error: null,
   }
 
@@ -14,7 +14,7 @@ export default function surveys(state = initialState, action){
         case "LOAD_SURVEY_SUCCESS" :
             return {...state, surveys :action.surveys};
         case "LOAD_SURVEY_FAIL" :
-            return [...state, action.error];
+            return {...state, error : action.error};
         default : 
             return state;
     }
