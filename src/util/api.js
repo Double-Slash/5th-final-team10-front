@@ -10,7 +10,7 @@ const api = axios.create({
     'Access-Control-Allow-Headers':
     'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
   },
-  validateStatus(status) {
+  validateStatus(status){
     return status < 500;
   },
 });
@@ -25,3 +25,9 @@ export const getS = () => api.get('/surveys');
 //user
 export const postLogin = form => api.post('/login',form);
 export const postRegister = form => api.post('/join', form);
+
+//mypage
+export const getInfo = (token) => {
+  api.defaults.headers.common['X-AUTH-TOKEN']={token};
+  api.get('/myPage');
+}
