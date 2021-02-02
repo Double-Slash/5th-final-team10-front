@@ -1,0 +1,184 @@
+@import 'my_custom.css';
+@import 'rc-slider/assets/index.css';
+@import 'ant-design-pro/dist/ant-design-pro.css';
+
+
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/NotoSansKR-Bold.woff2") format('woff2'),
+    url("./fonts/NotoSansKR-Bold.woff") format('woff'),
+    url("./fonts/NotoSansKR-Bold.otf") format('.otf')
+  }
+
+  @font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url("./fonts/NotoSansKR-Medium.woff2") format('woff2'),
+    url("./fonts/NotoSansKR-Medium.woff") format('woff'),
+    url("./fonts/NotoSansKR-Medium.otf") format('.otf')
+  }
+
+  @font-face {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/NotoSansKR-Regular.woff2") format('woff2'),
+    url("./fonts/NotoSansKR-Regular.woff") format('woff'),
+    url("./fonts/NotoSansKR-Regular.otf") format('.otf')
+  }
+
+  .modal {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal_content{
+    background-color: white;
+    margin-top: 154px;
+    height: 500px;
+    width: 840px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.align_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close{
+    color: black;
+    float: right;
+    font-weight: 700;
+}
+
+.close:hover{
+    color: #418AFF;
+    cursor: pointer;
+}
+
+.popUp_text{
+    font-weight: 700;
+    font-size: 30px;
+   text-align: center;
+}
+
+.ok_btn{
+    background-color: #418AFF;
+    height: 72px;
+    width: 401px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 7px;
+    margin-top:45px;
+    text-align: center;
+}
+
+.table_title{
+    color:black;
+    font-weight: 400;
+    font-size: 14px;
+}
+.table_title:hover{
+    color:  #418AFF;
+}
+
+.range{
+    text-align: center;
+    height: 80px;
+    width: 1280px;
+}
+
+.range .sliderValue{
+    position: relative;
+    width: 100%;
+}
+.range .sliderValue span{
+    text-align: center;
+    position: absolute;
+    height: 32px;
+    width: 41px;
+    color: #418AFF;
+    font-weight: 700;
+    top: 0px;
+    transform: translateX(-50%) scale(0);
+    transform-origin: bottom;
+    transition: transform 0.2s ease-in-out;
+    line-height: 27px;
+    z-index: 2;
+    background-image: url('../images/slider-label.png');
+    background-size: 41px 32px;
+}
+
+.range .sliderValue span.show{
+    transform: translateX(-10%) scale(1);
+}
+
+
+.range .field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.range .field .value{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.range .field .value.left{
+    bottom: 0px;
+    left: 0px;
+}
+
+.range .field .value.right{
+    bottom: 0px;
+    right: 0px;
+}
+
+.range .field input{
+    -webkit-appearance: none;
+    height: 16px;
+    width: 100%;
+    background: #C4C4C4;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+
+.range .field input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-image: url('../images/slider-thumb.png');
+    background-size: 20px;
+    cursor: pointer;
+    
+}
+.range .field input::focus{
+    outline: none;
+}
+.pointBox{
+    margin-top: 20px;
+    margin-left: 24px;
+    position: absolute;
+    z-index: 1;
+    width: 71px ;
+    height: 42px;
+    background-image: url('../images/point-box.png');
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
